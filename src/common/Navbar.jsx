@@ -1,30 +1,15 @@
 import { Link } from "react-router-dom";
+import getString from "./../lang/getString";
 
 function Navbar(
-    theme, setTheme, lang, setLang
+    {theme, setTheme, lang, setLang}
 ) {
     return (
-        <div>
+        <div className = "portfolio-navbar">
             <nav className="navbar navbar-expand-lg static-top" >
                 <div className="container">
-                    <div className = "row">
-                        <div className = "col-3 change-theme"
-                            onCLick = {
-                                () => {
-                                    if (theme === "light") {
-                                        setTheme("dark")
-                                    } else {
-                                        setTheme("light")
-                                    }
-                                }
-                            }
-                        >
-                            🌗
-                        </div>
-                    </div>
-
                     <button
-                        className="navbar-toggler me-3"
+                        className="navbar-toggler me-3 text-center"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarNav"
@@ -33,7 +18,7 @@ function Navbar(
                         aria-label="Toggle navigation"
                     >
                         <span
-                            className="navbar-toggler-icon"
+                            className="navbar-toggler-icon text-center"
                             style={{
                                 backgroundImage: `url(${
                                     theme === "light" ? 
@@ -45,25 +30,72 @@ function Navbar(
                     </button>
 
                     <div className="collapse navbar-collapse show" id="navbarNav">
-                    <ul className="navbar-nav ms-auto align-middle text-center">
-                        <li className="nav-item text-center">
-                            <Link className="nav-link text-center" to="/">
-                                Inicio
-                            </Link>
-                            <Link className="nav-link text-center" to="/profile">
-                                Perfil
-                            </Link>
-                            <Link className="nav-link text-center" to="/projects">
-                                Proyectos
-                            </Link>
-                            <Link className="nav-link text-center" to="/achievements">
-                                Logros
-                            </Link>
-                            <Link className="nav-link text-center" to="/contact">
-                                Contacto
-                            </Link>
-                        </li>
-                    </ul>
+                        <ul className="navbar-nav ms-auto align-middle text-center">
+                            <li className="nav-item text-center">
+                                <Link className="nav-link text-center portfolio-link" to="/">
+                                    {getString(lang, "HomepageTitle")}
+                                </Link>
+                            </li>
+                            <li className="nav-item text-center">
+                                <Link className="nav-link text-center portfolio-link" to="/profile">
+                                    {getString(lang, "ProfileTitle")}
+                                </Link>
+                            </li>
+                            <li className="nav-item text-center">
+                                <Link className="nav-link text-center portfolio-link" to="/projects">
+                                    {getString(lang, "ProjectsTitle")}
+                                </Link>
+                            </li>
+                            <li className="nav-item text-center">
+                                <Link className="nav-link text-center portfolio-link" to="/achievements">
+                                    {getString(lang, "AchievementsTitle")}
+                                </Link>
+                            </li>
+                            <li className="nav-item text-center">
+                                <Link className="nav-link text-center portfolio-link" to="/contact">
+                                    {getString(lang, "ContactTitle")}
+                                </Link>
+                            </li>
+                            <li className="nav-item text-center">
+                                <div className = "nav-link col-12"
+                                    onClick = {
+                                        () => {
+                                            if (theme === "light") {
+                                                setTheme("dark")
+                                            } else {
+                                                setTheme("light")
+                                            }
+                                        }
+                                    }
+
+                                    style = {{
+                                        cursor: "pointer"
+                                    }}
+                                >
+                                    🌗
+                                </div>
+                            </li>
+                            <li className="nav-item text-center">
+                                <div className = "nav-link col-12"
+                                    onClick = {
+                                        () => {
+                                            if (lang === "es") {
+                                                setLang("en")
+                                            } else {
+                                                setLang("es")
+                                            }
+                                        }
+                                    }
+
+                                    style = {{
+                                        cursor: "pointer"
+                                    }}
+                                >
+                                    {lang}
+                                </div>
+                            </li>
+
+                        </ul>
                     </div>
                     
                 </div>

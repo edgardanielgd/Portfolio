@@ -32,7 +32,50 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Portfolio stylesheet */
+.portfolio-main-body {
+  background-color: var(--portfolio-background-color);
+  color: var(--portfolio-primary-text-color);
+}
+
+.portfolio-project-card {
+  background-color: var(--portfolio-navbar-background-color);
+  color: var(--portfolio-primary-text-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.portfolio-main-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio-navbar {
+  background-color: var(--portfolio-navbar-background-color);
+}
+
+.portfolio-footer {
+  background-color: var(--portfolio-navbar-background-color);
+}
+
+.portfolio-link {
+  background-color: transparent;
+  color: var(--portfolio-primary-text-color);
+}
+
+.portfolio-link:hover {
+  background-color: var(--portfolio-secondary-background-color);
+  color: var(--portfolio-secondary-text-color);
 }
