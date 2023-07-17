@@ -12,6 +12,10 @@ const en = {
         as well as a brief description of each one of them, direct links to their repositories and even 
         demonstrations of some of them
     `,
+    "HomepageParagraph1": `
+        I'm a Systems and Computing Engineering student at Universidad Nacional de Colombia, enthusiast for
+        autonomous learning and the implementation of new trends in real projects.
+    `,
     "HostedWithGithub": "Hosted with Github Pages",
     "VisitCV": "Visit CV",
     "LastUpdate": "Last update: ",

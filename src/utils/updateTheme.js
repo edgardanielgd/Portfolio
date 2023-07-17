@@ -4,6 +4,10 @@ const config = {
     "--portfolio-primary-text-color": { light: "#2c6919", dark: "#ffffff" },
     "--portfolio-secondary-text-color": { light: "#ffffff", dark: "#2c6919" },
     "--portfolio-secondary-background-color": { light: "#2c6919", dark: "#ffffff" },
+    "--portfolio-background-image": {
+        light: "url('https://i.imgur.com/5XZQ1YF.png')",
+        dark: "url('Background-dark.png')"
+    }
 };
 
 function updateTheme(theme) {

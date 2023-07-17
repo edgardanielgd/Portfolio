@@ -14,6 +14,11 @@ function Footer({lang}) {
                     {getString(lang, "LastUpdate")+ "2023-07-15"}
                 </div>
             </div>
+            <div className="row">
+                <a href="https://www.freepik.com/free-vector/white-background-with-zigzag-pattern-design_17564643.htm#query=white%20pattern&position=0&from_view=keyword&track=ais">
+                    Background Image by starline
+                </a> on Freepik
+            </div>
         </div>
     )
 }

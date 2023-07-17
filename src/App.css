@@ -52,6 +52,25 @@
   text-align: center;
 }
 
+.portfolio-framework-logo {
+  max-height: 100px !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.portfolio-frameworks-div {
+  background-color: #ffffff;
+  color: var(--portfolio-secondary-text-color);
+  border-radius: 10px;
+}
+
+.portfolio-frameworks-div div:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
 .portfolio-main-title {
   margin-top: 20px;
   margin-bottom: 20px;
