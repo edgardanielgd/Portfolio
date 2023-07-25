@@ -20,12 +20,109 @@ const en = {
     "VisitCV": "Visit CV",
     "LastUpdate": "Last update: ",
     "Project-OfertappTitle": "OfertApp",
+    "Project-OfertappTitle-description": `
+        Online Store with the particular capability of allowing users to create auctions over offered items, buyers can place bids
+        for the products they want to buy and, when the auction ends, the one who placed the higher bid will continue with the selling process
+    `,
     "Project-NNFromScrath": "Neural Network from scratch",
+    "Project-NNFromScrath-description": `
+        Convolutional Neural Network (CNN) implemented from scratch for self-learning and investigation purposes by means of 
+        back references (so that visualization is easier to interpret). Implementation does include classical convolutional layers
+        and padding features, as well as dense layers and softmax activations for classification
+    `,
     "Project-DynamicSystemSimulator": "Dynamic System Simulator",
+    "Project-DynamicSystemSimulator-description": `
+        Systems Dynamics simulator, configurable via console with whether Euler or RK45 solvers, also stocks graphics are available.
+        Simulator offers configurable expressions for both input and output flows as well as custom expressions for stocks calculation 
+        (changes over time), even when they don't met the common expression of "output flows minus input flows"
+    `,
     "Project-HaloStatsDiscordBot": "Discord bot with various utilities",
+    "Project-HaloStatsDiscordBot-description": `
+        Discord Bot useful for querying Servers in a videogame (Halo CE) through an open UDP port. Also players database and remote console connections for
+        administration (this time through TCP ports) are possible
+    `,
     "Project-NextWordPredictor": "Next word prediction given a text",
+    "Project-NextWordPredictor-description": `
+        Discord Bot useful for querying Servers in a videogame (Halo CE) through an open UDP port. Also players database and remote console connections for
+        administration (this time through TCP ports) are possible
+    `,
     "Project-ChatSimulator": "Chat data transmission simulator",
+    "Project-ChatSimulator-description": `
+        Chat simulator for data transmission over a network from a client that sends a codified and compressed message
+        to a server that decodes and decompresses it, error checking is also implemented and multiple
+        transmission errors can be simulated as well. Finally the chat allows to send raw text messages, images and audio
+        notes
+    `,
     "Project-MathsLang": "Matlab-like language interpreter",
+    "Project-MathsLang-description": `
+        Matlab-like language interpreter, it allows to declare variables, perform operations over them and even
+        plot graphics. It also supports the use of functions and loops, some custom operators, such as "~" for
+        array insertion is also implemented.
+    `,
+    "Profile-description-title": "A little bit about me",
+    "Profile-description": `
+        I'm an entusiast of autonomous learning on the new trends in software
+        development, mainly those related to Backend components in web
+        applications and database design. Likewise, the design, implementation
+        and logical bases of Artificial Intelligence applied to problem solving
+        represent striking topics for me. Finally, i enjoy challenges that involve
+        training in a new tool or Framework previously unknown for me, as well as
+        those that challenge my current skills.
+    `,
+    "Profile-skills-title": "What i know and what i can do",
+    "Profile-skills-1": `
+        Knowledge in Backend development with Node JS, Django and Spring Boot
+    `,
+    "Profile-skills-2": `
+        Knowledge in Frontend development with React JS
+    `,
+    "Profile-skills-3": `
+        Knowledge in version control systems: Git and GitHub
+    `,
+    "Profile-skills-4": `
+        Knowledge in databases managemente and schema design: MySQL, PostgreSQL and MongoDB
+    `,
+    "Profile-skills-5": `
+        Knowledge in implementation and deployment of Specialized Data Structures and Algorithms
+        for solving real world problems
+    `,
+    "Profile-soft-skills-title": "About my soft skills",
+    "Profile-soft-skills-1": `
+        I can adapt to multiple work environments and i'm always willing to learn new things
+    `,
+    "Profile-soft-skills-2": `
+        I describe myself as a responsible and committed person with the assigned tasks
+    `,
+    "Profile-soft-skills-3": `
+        I love to train myself in new technologies and tools, what i call "autonomous learning capacity"
+    `,
+    "Profile-lang-skills-title": "Languages i speak",
+    "Profile-lang-skills-spanish": "Spanish - Native",
+    "Profile-lang-skills-english": "English - B1 (formarly)",
+    "Profile-experience-title": "Academical Experience",
+    "Profile-teacher-assistant-title": "Teacher assistant",
+    "Profile-teacher-assistant": `
+        Teacher assistant for the course "Object Oriented Programming (OOP)" at National University of Colombia
+        during the second semester of 2022
+    `,
+    "Profile-currently-studying-title": "What about my autodidactic training?",
+    "Profile-currently-studying": `
+        Currently i'm studying the following topics:
+        - Backend development in Golang with Go Fiber and GORM
+        - Mobile apps development with Jetpack Compose (Kotlin)
+        - Backend development with Laravel (PHP)
+        - Deep Learning Specialization (Coursera)
+    `,
+    "Achievements-description": "Here you'll find a list of my most important achievements including certificates",
+    "Achievements-Academic": "Academic environment",
+    "Achievements-New-Knowledge": "My certified courses",
+    "Achievemens-Additional-Knowledge": "Additional knowledge",
+    "Contact-LinkedIn": "Find me in LinkedIn",
+    "Contact-LinkedIn-body": "https://www.linkedin.com/in/edgard-gonzalezd/",
+    "Contact-GitHub": "Find me in GitHub",
+    "Contact-GitHub-body": "https://github.com/edgardanielgd",
+    "Contact-Email": "Contact me via email",
+    "Contact-Email-body": "edgargonzalez.sistemas@gmail.com",
 }
 
 export default en;

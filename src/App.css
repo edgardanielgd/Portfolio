@@ -53,22 +53,18 @@
 }
 
 .portfolio-framework-logo {
-  max-height: 100px !important;
+  max-height: 80px !important;
+  max-width: 100%;
+}
+
+.portfolio-framework-div {
+  background-color: #ffffff;
+  color: var(--portfolio-secondary-text-color);
+  border-radius: 50%;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.portfolio-frameworks-div {
-  background-color: #ffffff;
-  color: var(--portfolio-secondary-text-color);
-  border-radius: 10px;
-}
-
-.portfolio-frameworks-div div:hover {
-  background-color: #f1f1f1;
-  border-radius: 10px;
 }
 
 .portfolio-main-title {
@@ -97,4 +93,10 @@
 .portfolio-link:hover {
   background-color: var(--portfolio-secondary-background-color);
   color: var(--portfolio-secondary-text-color);
+}
+
+.portfolio-face-img {
+  max-height: 300px;
+  max-width: 100%;
+  border-radius: 30%;
 }
