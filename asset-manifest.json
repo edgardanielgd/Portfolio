@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.06e13f71.css",
-    "main.js": "/Portfolio/static/js/main.7bfc6f93.js",
+    "main.css": "/Portfolio/static/css/main.03d36ee4.css",
+    "main.js": "/Portfolio/static/js/main.a210b4db.js",
     "static/js/787.b98c23e5.chunk.js": "/Portfolio/static/js/787.b98c23e5.chunk.js",
+    "static/media/Github.jpg": "/Portfolio/static/media/Github.75aea7896b3dba309149.jpg",
+    "static/media/CourseraLogo.png": "/Portfolio/static/media/CourseraLogo.730ebfad4212ede0ba12.png",
     "index.html": "/Portfolio/index.html",
-    "main.06e13f71.css.map": "/Portfolio/static/css/main.06e13f71.css.map",
-    "main.7bfc6f93.js.map": "/Portfolio/static/js/main.7bfc6f93.js.map",
+    "static/media/PlatziLogo.webp": "/Portfolio/static/media/PlatziLogo.5a0b5a23361c62941276.webp",
+    "main.03d36ee4.css.map": "/Portfolio/static/css/main.03d36ee4.css.map",
+    "main.a210b4db.js.map": "/Portfolio/static/js/main.a210b4db.js.map",
     "787.b98c23e5.chunk.js.map": "/Portfolio/static/js/787.b98c23e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06e13f71.css",
-    "static/js/main.7bfc6f93.js"
+    "static/css/main.03d36ee4.css",
+    "static/js/main.a210b4db.js"
   ]
 }
