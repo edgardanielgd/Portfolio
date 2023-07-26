@@ -8,25 +8,22 @@ function ContactView({lang}){
             </div>
             <div className="col-12 text-center">
                 <h4>
-                    {getString(lang, "Contact-LinkedIn")}
+                    <a href="https://www.linkedin.com/in/edgard-gonzalezd/">
+                        {getString(lang, "Contact-LinkedIn")}
+                    </a>
                 </h4>
-                <p>
-                    {getString(lang, "Contact-LinkedIn-body")}
-                </p>
 
                 <h4>
-                    {getString(lang, "Contact-GitHub")}
+                    <a href="https://github.com/edgardanielgd">
+                        {getString(lang, "Contact-GitHub")}
+                    </a>
                 </h4>
-                <p>
-                    {getString(lang, "Contact-GitHub-body")}
-                </p>
 
                 <h4>
-                    {getString(lang, "Contact-Email")}
+                    <a href="edgargonzalez.sistemas@gmail.com">
+                        {getString(lang, "Contact-Email")}
+                    </a>
                 </h4>
-                <p>
-                    {getString(lang, "Contact-Email-body")}
-                </p>
             </div>
         </div>
     );

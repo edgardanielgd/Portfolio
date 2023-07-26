@@ -17,7 +17,6 @@ const en = {
         autonomous learning and the implementation of new trends in real projects.
     `,
     "HostedWithGithub": "Hosted with Github Pages",
-    "VisitCV": "Visit CV",
     "LastUpdate": "Last update: ",
     "Project-OfertappTitle": "OfertApp",
     "Project-OfertappTitle-description": `
@@ -114,15 +113,22 @@ const en = {
         - Deep Learning Specialization (Coursera)
     `,
     "Achievements-description": "Here you'll find a list of my most important achievements including certificates",
+    "Achievements-Courses": "Courses and certifications",
+    "Achievements-Coursera-1": "Unsupervised Algorithms in Machine Learning",
+    "Achievements-Coursera-2": "Algorithmic Thinking (Part 1)",
+    "Achievements-Coursera-3": "Algorithmic Thinking (Part 2)",
+    "Achievements-Platzi-1": "Curso de Backend con Node.js: API REST con Express.js",
+    "Achievements-Platzi-2": "Curso de Backend con Node.js: Base de Datos con PostgreSQL",
+    "Achievements-Platzi-3": "Curso de Bootstrap 4",
+    "Achievements-Platzi-4": "Curso de Fintech para Emprendedores",
+    "Achievements-Platzi-5": "Curso de Programación Básica",
+    "Achievements-Platzi-6": "Fundamentos de Ingeniería de Software",
     "Achievements-Academic": "Academic environment",
-    "Achievements-New-Knowledge": "My certified courses",
+    "Achievements-Academic-1": "GPA of 4.7/5.0 during my whole career",
     "Achievemens-Additional-Knowledge": "Additional knowledge",
     "Contact-LinkedIn": "Find me in LinkedIn",
-    "Contact-LinkedIn-body": "https://www.linkedin.com/in/edgard-gonzalezd/",
     "Contact-GitHub": "Find me in GitHub",
-    "Contact-GitHub-body": "https://github.com/edgardanielgd",
     "Contact-Email": "Contact me via email",
-    "Contact-Email-body": "edgargonzalez.sistemas@gmail.com",
 }
 
 export default en;

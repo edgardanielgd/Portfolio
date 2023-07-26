@@ -100,3 +100,33 @@
   max-width: 100%;
   border-radius: 30%;
 }
+
+.portfolio-coursera-logo {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+.portfolio-coursera-link {
+  color: #ffffff;
+}
+
+.portfolio-platzi-link {
+  color: #ffffff;
+}
+
+.portfolio-platzi-logo {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+.portfolio-coursera {
+  max-height: 100px;
+  max-width: 100%;
+  background-color: #0056D2;
+}
+
+.portfolio-platzi {
+  max-height: 100px;
+  max-width: 100%;
+  background-color: #98CA3F;
+}
