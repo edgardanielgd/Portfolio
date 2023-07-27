@@ -1,12 +1,13 @@
 import getString from "./../lang/getString";
 import CourseraItem from "../common/CourseraItem";
 import PlatziItem from "../common/PlatziItem";
+import PageTitle from "../common/PageTitle";
 
 function AchievementsView({lang}){
     return (
         <div className="row">
             <div className="col-12 text-center portfolio-main-title">
-                <h1>{getString(lang, "AchievementsTitle")}</h1>
+                <PageTitle title={getString(lang, "AchievementsTitle")}/>
                 <p>
                     {getString(lang, "Achievements-description")}
                 </p>

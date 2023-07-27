@@ -95,7 +95,7 @@ const es = {
     "Profile-soft-skills-3": `
         Me encanta capacitarme en nuevas tecnologías y herramientas, lo que yo llamo "capacidad de aprendizaje autónomo"
     `,
-    "Profile-lang-skills-title": "Idiomas que hablo",
+    "Profile-lang-skills-title": "Idiomas",
     "Profile-lang-skills-spanish": "Español - Nativo",
     "Profile-lang-skills-english": "Inglés - B1 (formalmente)",
     "Profile-experience-title": "Experiencia académica",

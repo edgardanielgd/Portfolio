@@ -95,7 +95,7 @@ const en = {
     "Profile-soft-skills-3": `
         I love to train myself in new technologies and tools, what i call "autonomous learning capacity"
     `,
-    "Profile-lang-skills-title": "Languages i speak",
+    "Profile-lang-skills-title": "Languages",
     "Profile-lang-skills-spanish": "Spanish - Native",
     "Profile-lang-skills-english": "English - B1 (formarly)",
     "Profile-experience-title": "Academical Experience",

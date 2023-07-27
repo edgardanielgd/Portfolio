@@ -1,78 +1,119 @@
 import getString from "./../lang/getString";
-import myGithubProfimage from "./../images/Github.jpg";
+import myImage from "./../images/Edgar.jpg";
+import PageTitle from "../common/PageTitle";
 
 function ProfileView({lang}) {
     return (
         <div className="row">
             <div className="col-12 text-center portfolio-main-title">
-                <h1>{getString(lang, "ProfileTitle")}</h1>
+                <PageTitle title={getString(lang, "ProfileTitle")}/>
             </div>
             <div className = "row">
-                <div className="col-12 col-sm-4 text-center">
-                    <img
-                        src = {myGithubProfimage}
-                        alt = "GithubProfile"
-                        className = "img-fluid portfolio-face-img"
-                    />
-                    <h4>
-                        {getString(lang, "Profile-lang-skills-title")}
-                    </h4>
-                    <h5>
-                        {getString(lang, "Profile-lang-skills-spanish")}
-                    </h5>
-                    <h5>
-                        {getString(lang, "Profile-lang-skills-english")}
-                    </h5>
+                <div className="col-12 col-sm-4 text-center align-middle">
+                    <div className="mb-5">
+                        <img
+                            src = {myImage}
+                            alt = "GithubProfile"
+                            className = "img-fluid portfolio-face-img"
+                        />
+                    </div>
+                    <div className="mb-5">
+                        <h3>
+                            {getString(lang, "Profile-lang-skills-title")}
+                        </h3>
+                    </div>
+                    <div className="mb-4">
+                        <h4 className="mb-4">
+                            {getString(lang, "Profile-lang-skills-spanish")}
+                        </h4>
+                        <div className="row portfolio-language-rep">
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                        </div>
+                    </div>
+                    <div className="mb-4">
+                        <h4 className="mb-4">
+                            {getString(lang, "Profile-lang-skills-english")}
+                        </h4>
+                        <div className="row portfolio-language-rep">
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">🟦</h3>
+                            <h3 className="col-2">◻️</h3>
+                            <h3 className="col-2">◻️</h3>
+                            <h3 className="col-2">◻️</h3>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-12 col-sm-8 text-center">
-                    <h4>
-                        {getString(lang, "Profile-description-title")}
-                    </h4>
-                    <p>
-                        {getString(lang, "Profile-description")}
-                    </p>
+                    <div className="mb-5">
+                        <h3 className="mb-1">
+                            {getString(lang, "Profile-description-title")}
+                        </h3>
+                        <p className="portfolio-paragraph">
+                            {getString(lang, "Profile-description")}
+                        </p>
+                    </div>
 
-                    <h4>
-                        {getString(lang, "Profile-skills-title")}
-                    </h4>
-                    <p>
-                        {getString(lang, "Profile-skills-1")}
-                    </p>
-                    <p>
-                        {getString(lang, "Profile-skills-2")}
-                    </p>
-                    <p>
-                        {getString(lang, "Profile-skills-3")}
-                    </p>
-                    <p>
-                        {getString(lang, "Profile-skills-4")}
-                    </p>
-                    <p>
-                        {getString(lang, "Profile-skills-5")}
-                    </p>
+                    <div className="mb-5">
+                        <h3>
+                            {getString(lang, "Profile-skills-title")}
+                        </h3>
+                        <ul className="portfolio-list"
+                            style={{"listStyleType": "\"📒\""}}
+                        >
+                            <li>
+                                {getString(lang, "Profile-skills-1")}
+                            </li>
+                            <li>
+                                {getString(lang, "Profile-skills-2")}
+                            </li>
+                            <li>
+                                {getString(lang, "Profile-skills-3")}
+                            </li>
+                            <li>
+                                {getString(lang, "Profile-skills-4")}
+                            </li>
+                            <li>
+                                {getString(lang, "Profile-skills-5")}
+                            </li>
+                        </ul>
+                    </div>
 
-                    <h4>
-                        {getString(lang, "Profile-soft-skills-title")}
-                    </h4>
-                    <p>
-                        {getString(lang, "Profile-soft-skills-1")}
-                    </p>
-                    <p>
-                        {getString(lang, "Profile-soft-skills-2")}
-                    </p>
-                    <p>
-                        {getString(lang, "Profile-soft-skills-3")}
-                    </p>
+                    <div className="mb-5">
+                        <h3>
+                            {getString(lang, "Profile-soft-skills-title")}
+                        </h3>
+                        <ul className="portfolio-list"
+                            style={{"listStyleType": "\"🐻‍❄️\""}}
+                        >
+                            <li>
+                                {getString(lang, "Profile-soft-skills-1")}
+                            </li>
+                            <li>
+                                {getString(lang, "Profile-soft-skills-2")}
+                            </li>
+                            <li>
+                                {getString(lang, "Profile-soft-skills-3")}
+                            </li>
+                        </ul>
+                    </div>
 
-                    <h4>
-                        {getString(lang, "Profile-experience-title")}
-                    </h4>
-                    <h5>
-                        {getString(lang, "Profile-teacher-assistant-title")}
-                    </h5>
-                    <p>
-                        {getString(lang, "Profile-teacher-assistant")}
-                    </p>
+                    <div className="mb-5">
+                        <h3>
+                            {getString(lang, "Profile-experience-title")}
+                        </h3>
+                        <h5>
+                            {getString(lang, "Profile-teacher-assistant-title")}
+                        </h5>
+                        <p className="portfolio-paragraph">
+                            {getString(lang, "Profile-teacher-assistant")}
+                        </p>
+                    </div>
                     
                 </div>
             </div>

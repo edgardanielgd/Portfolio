@@ -1,16 +1,33 @@
 import getString from "./../lang/getString";
+import GithubProfile from "./../images/Github.jpg"
+import UNAL from "./../images/UNAL-light.png"
+import PageTitle from "../common/PageTitle";
 
-function HomepageView({lang}){
+function HomepageView({lang, theme}){
     return (
         <div className="row">
             <div className="col-12 text-center portfolio-main-title">
-                <h1>{getString(lang, "HomepageDescriptionTitle")}</h1>
+                <PageTitle title={getString(lang, "HomepageDescriptionTitle")}/>
             </div>
-            <div className="col-12 col-sm-5 offset-sm-7 mb-5">
-                <p>{getString(lang, "HomepageDescription")}</p>
+            <div className="col-12 col-sm-5 mb-5 portfolio-homepage-profile text-center">
+                <img
+                    src={GithubProfile}
+                    alt="Github"
+                    className="portfolio-homepage-profile-image"
+                />
             </div>
-            <div className="col-12 col-sm-5 mb-5">
-                <p>{getString(lang, "HomepageParagraph1")}</p>
+            <div className="col-12 col-sm-7 mb-5">
+                <p className="portfolio-paragraph">{getString(lang, "HomepageDescription")}</p>
+            </div>
+            <div className="col-12 col-sm-7 mb-5">
+                <p className="portfolio-paragraph">{getString(lang, "HomepageParagraph1")}</p>
+            </div>
+            <div className="col-12 col-sm-5 mb-5 portfolio-homepage-profile text-center">
+                <img
+                    src={UNAL}
+                    alt="UNAL"
+                    className="portfolio-homepage-college-image"
+                />
             </div>
             <div className="col-12">
                 <div className="row text-center">

@@ -1,10 +1,11 @@
 import getString from "./../lang/getString";
+import PageTitle from "../common/PageTitle";
 
 function ContactView({lang}){
     return (
         <div className="row">
             <div className="col-12 text-center portfolio-main-title">
-                <h1>{getString(lang, "ContactTitle")}</h1>
+                <PageTitle title={getString(lang, "ContactTitle")}/>
             </div>
             <div className="col-12 text-center">
                 <h4>
@@ -20,7 +21,7 @@ function ContactView({lang}){
                 </h4>
 
                 <h4>
-                    <a href="edgargonzalez.sistemas@gmail.com">
+                    <a href="mailto: edgargonzalez.sistemas@gmail.com">
                         {getString(lang, "Contact-Email")}
                     </a>
                 </h4>

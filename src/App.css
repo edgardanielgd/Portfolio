@@ -50,6 +50,23 @@
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+
+  animation-duration: 1s;
+  animation-name: animate-card-entrance;
+  animation-fill-mode: backwards;
+
+}
+
+@keyframes animate-card-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .portfolio-framework-logo {
@@ -65,16 +82,87 @@
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
+
+  animation-duration: 1s;
+  animation-name: animate-framework-div-entrance;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-framework-div-entrance {
+  0% {
+    opacity: 0;
+    rotate: 360deg;
+  }
+
+  100% {
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
+
+.portfolio-homepage-profile-image {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+
+  border-style: solid;
+  border-color: var(--portfolio-navbar-background-color);
+  border-width: 5px;
+
+}
+
+.portfolio-homepage-college-image {
+  height: 150px;
+  width: 150px;
 }
 
 .portfolio-main-title {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .portfolio-container {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.portfolio-paragraph {
+  border-left-style: solid;
+  border-left-color: var(--portfolio-navbar-background-color);
+  border-left-width: 5px;
+  padding-left: 10px;
+
+  animation-duration: 1s;
+  animation-name: animate-paragraph-entrance;
+  animation-fill-mode: backwards;
+}
+
+.portfolio-list {
+  border-left-style: solid;
+  border-left-color: var(--portfolio-navbar-background-color);
+  border-left-width: 5px;
+  padding-left: 30px;
+
+  animation-duration: 1s;
+  animation-name: animate-paragraph-entrance;
+  animation-fill-mode: backwards;
+}
+
+.portfolio-list li {
+  margin-bottom: 10px;
+}
+
+@keyframes animate-paragraph-entrance {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .portfolio-navbar {
@@ -83,6 +171,11 @@
 
 .portfolio-footer {
   background-color: var(--portfolio-navbar-background-color);
+}
+
+.portfolio-language-rep {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .portfolio-link {
@@ -96,9 +189,15 @@
 }
 
 .portfolio-face-img {
-  max-height: 300px;
-  max-width: 100%;
-  border-radius: 30%;
+  max-height: 250px;
+  max-width: 250px;
+  border-radius: 10%;
+
+  aspect-ratio: 1;
+
+  border-style: solid;
+  border-color: var(--portfolio-navbar-background-color);
+  border-width: 5px;
 }
 
 .portfolio-coursera-logo {

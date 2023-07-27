@@ -21,6 +21,7 @@ function App() {
     return (
       React.createElement(element, {
         lang: lang,
+        theme: theme
       })
     )
   }

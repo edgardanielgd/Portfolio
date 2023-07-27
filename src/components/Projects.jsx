@@ -1,10 +1,11 @@
 import getString from "./../lang/getString";
+import PageTitle from "../common/PageTitle";
 
 function ProjectsView({lang}) {
     return (
         <div className="row">
             <div className="col-12 text-center portfolio-main-title">
-                <h1>{getString(lang, "ProjectsTitle")}</h1>
+                <PageTitle title={getString(lang, "ProjectsTitle")}/>
             </div>
             
             <div className="col-12 col-sm-6 col-md-4">
