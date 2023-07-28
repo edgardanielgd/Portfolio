@@ -18,6 +18,17 @@ const en = {
     `,
     "HostedWithGithub": "Hosted with Github Pages",
     "LastUpdate": "Last update: ",
+    "Project-IdealistTitle": "Idealist (INDEV)",
+    "Project-IdealistTitle-description": `
+        Application for the management of ideas and brainstorms as well as projects, it allows users
+        to prevent procrastination and keep track of personal and groupal innovations by motivating authors
+        and giving them tips and sense of progress
+        `,
+    "Project-SonderSyncTitle": "SonderSync (INDEV)",
+    "Project-SonderSyncTitle-description": `
+        Application for connecting people with similar interests, work areas and hobbies, it allows users
+        to chat via text, audio and video
+        `,
     "Project-OfertappTitle": "OfertApp",
     "Project-OfertappTitle-description": `
         Online Store with the particular capability of allowing users to create auctions over offered items, buyers can place bids
@@ -25,65 +36,66 @@ const en = {
     `,
     "Project-NNFromScrath": "Neural Network from scratch",
     "Project-NNFromScrath-description": `
-        Convolutional Neural Network (CNN) implemented from scratch for self-learning and investigation purposes by means of 
-        back references (so that visualization is easier to interpret). Implementation does include classical convolutional layers
+        Convolutional Neural Network(CNN) implemented from scratch for self - learning and investigation purposes by means of 
+        back references(so that visualization is easier to interpret).Implementation does include classical convolutional layers
         and padding features, as well as dense layers and softmax activations for classification
     `,
     "Project-DynamicSystemSimulator": "Dynamic System Simulator",
     "Project-DynamicSystemSimulator-description": `
         Systems Dynamics simulator, configurable via console with whether Euler or RK45 solvers, also stocks graphics are available.
-        Simulator offers configurable expressions for both input and output flows as well as custom expressions for stocks calculation 
-        (changes over time), even when they don't met the common expression of "output flows minus input flows"
-    `,
+        Simulator offers configurable expressions for both input and output flows as well as custom expressions for stocks calculation
+    (changes over time), even when they don't met the common expression of "output flows minus input flows"
+        `,
     "Project-HaloStatsDiscordBot": "Discord bot with various utilities",
     "Project-HaloStatsDiscordBot-description": `
-        Discord Bot useful for querying Servers in a videogame (Halo CE) through an open UDP port. Also players database and remote console connections for
-        administration (this time through TCP ports) are possible
-    `,
+        Discord Bot useful for querying Servers in a videogame(Halo CE) through an open UDP port.Also players database and remote console connections for
+        administration(this time through TCP ports) are possible
+        `,
     "Project-NextWordPredictor": "Next word prediction given a text",
     "Project-NextWordPredictor-description": `
-        Discord Bot useful for querying Servers in a videogame (Halo CE) through an open UDP port. Also players database and remote console connections for
-        administration (this time through TCP ports) are possible
-    `,
+        Discord Bot useful for querying Servers in a videogame(Halo CE) through an open UDP port.Also players database and remote console connections for
+        administration(this time through TCP ports) are possible
+        `,
     "Project-ChatSimulator": "Chat data transmission simulator",
     "Project-ChatSimulator-description": `
         Chat simulator for data transmission over a network from a client that sends a codified and compressed message
         to a server that decodes and decompresses it, error checking is also implemented and multiple
-        transmission errors can be simulated as well. Finally the chat allows to send raw text messages, images and audio
-        notes
+        transmission errors can be simulated as well.Finally the chat allows to send raw text messages, images and audio
+notes
     `,
     "Project-MathsLang": "Matlab-like language interpreter",
     "Project-MathsLang-description": `
-        Matlab-like language interpreter, it allows to declare variables, perform operations over them and even
-        plot graphics. It also supports the use of functions and loops, some custom operators, such as "~" for
+Matlab - like language interpreter, it allows to declare variables, perform operations over them and even
+        plot graphics.It also supports the use of functions and loops, some custom operators, such as "~" for
         array insertion is also implemented.
     `,
     "Profile-description-title": "A little bit about me",
     "Profile-description": `
         I'm an entusiast of autonomous learning on the new trends in software
-        development, mainly those related to Backend components in web
-        applications and database design. Likewise, the design, implementation
+development, mainly those related to Backend components in web
+        applications and database design.Likewise, the design, implementation
         and logical bases of Artificial Intelligence applied to problem solving
-        represent striking topics for me. Finally, i enjoy challenges that involve
-        training in a new tool or Framework previously unknown for me, as well as
-        those that challenge my current skills.
+        represent striking topics for me.Finally, i enjoy challenges that involve
+training in a new tool or Framework previously unknown for me, as well as
+    those that challenge my current skills.
     `,
+    "Project-RepoButton": "Visit repository",
     "Profile-skills-title": "What i know and what i can do",
     "Profile-skills-1": `
-        Knowledge in Backend development with Node JS, Django and Spring Boot
+Knowledge in Backend development with Node JS, Django and Spring Boot
     `,
     "Profile-skills-2": `
-        Knowledge in Frontend development with React JS
+Knowledge in Frontend development with React JS
     `,
     "Profile-skills-3": `
-        Knowledge in version control systems: Git and GitHub
+Knowledge in version control systems: Git and GitHub
     `,
     "Profile-skills-4": `
-        Knowledge in databases managemente and schema design: MySQL, PostgreSQL and MongoDB
+Knowledge in databases managemente and schema design: MySQL, PostgreSQL and MongoDB
     `,
     "Profile-skills-5": `
-        Knowledge in implementation and deployment of Specialized Data Structures and Algorithms
-        for solving real world problems
+Knowledge in implementation and deployment of Specialized Data Structures and Algorithms
+for solving real world problems
     `,
     "Profile-soft-skills-title": "About my soft skills",
     "Profile-soft-skills-1": `
@@ -107,11 +119,11 @@ const en = {
     "Profile-currently-studying-title": "What about my autodidactic training?",
     "Profile-currently-studying": `
         Currently i'm studying the following topics:
-        - Backend development in Golang with Go Fiber and GORM
-        - Mobile apps development with Jetpack Compose (Kotlin)
-        - Backend development with Laravel (PHP)
-        - Deep Learning Specialization (Coursera)
-    `,
+    - Backend development in Golang with Go Fiber and GORM
+        - Mobile apps development with Jetpack Compose(Kotlin)
+            - Backend development with Laravel(PHP)
+            - Deep Learning Specialization(Coursera)
+                `,
     "Achievements-description": "Here you'll find a list of my most important achievements including certificates",
     "Achievements-Courses": "Courses and certifications",
     "Achievements-Coursera-1": "Unsupervised Algorithms in Machine Learning",
@@ -124,7 +136,7 @@ const en = {
     "Achievements-Platzi-5": "Curso de Programación Básica",
     "Achievements-Platzi-6": "Fundamentos de Ingeniería de Software",
     "Achievements-Academic": "Academic environment",
-    "Achievements-Academic-1": "GPA of 4.7/5.0 during my whole career",
+    "Achievements-Academic-1": "GPA of 4.7/5.0 cumulated in my whole career",
     "Achievemens-Additional-Knowledge": "Additional knowledge",
     "Contact-LinkedIn": "Find me in LinkedIn",
     "Contact-GitHub": "Find me in GitHub",

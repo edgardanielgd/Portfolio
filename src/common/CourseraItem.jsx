@@ -11,7 +11,7 @@ function CourseraItem({text, link}) {
                         className="img-fluid portfolio-coursera-logo"
                     />
                 </div>
-                <div className="col-12 col-sm-9">
+                <div className="col-12 col-sm-9 portfolio-course-container">
                     <a href={link} className="portfolio-coursera-link">
                         <h4>{text}</h4>
                     </a>

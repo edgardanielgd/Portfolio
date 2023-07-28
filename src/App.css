@@ -133,6 +133,8 @@
   border-left-width: 5px;
   padding-left: 10px;
 
+  margin: auto !important;
+
   animation-duration: 1s;
   animation-name: animate-paragraph-entrance;
   animation-fill-mode: backwards;
@@ -163,6 +165,12 @@
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+.portfolio-project-img {
+  max-width: 100%;
+  max-height: 200px !important;
+  background-color: #282c34;
 }
 
 .portfolio-navbar {
@@ -207,9 +215,19 @@
 
 .portfolio-coursera-link {
   color: #ffffff;
+  text-decoration: none;
+}
+
+.portfolio-coursera-link:hover {
+  color: #ffffff;
 }
 
 .portfolio-platzi-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.portfolio-platzi-link:hover {
   color: #ffffff;
 }
 
@@ -222,10 +240,40 @@
   max-height: 100px;
   max-width: 100%;
   background-color: #0056D2;
+
+  animation-duration: 1s;
+  animation-name: animate-course-entrance;
+  animation-fill-mode: backwards;
+}
+
+.portfolio-course-container {
+  margin: auto;
 }
 
 .portfolio-platzi {
   max-height: 100px;
   max-width: 100%;
   background-color: #98CA3F;
+
+  animation-duration: 1s;
+  animation-name: animate-course-entrance;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-course-entrance {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.portfolio-logo {
+  max-height: 100px;
+  max-width: 100%;
+  margin-right: 100px;
 }

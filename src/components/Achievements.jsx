@@ -53,6 +53,7 @@ function AchievementsView({lang}){
             />
             <div className="col-12 text-center mb-4">
                 <h4>{getString(lang, "Achievements-Academic")}</h4>
+                <p className="portfolio-paragraph">{getString(lang, "Achievements-Academic-1")}</p>
             </div>
         </div>
     );

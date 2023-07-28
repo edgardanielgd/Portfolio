@@ -58,6 +58,7 @@ const es = {
         trazar gráficos. También admite el uso de funciones y bucles, también se implementan algunos operadores personalizados, como "~" para
         inserción de matrices.
     `,
+    "Project-RepoButton": "Visitar repositorio",
     "Profile-description-title": "Un poco sobre mí",
     "Profile-description": `
         Soy un estudiante de Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia, actualmente en el octavo semestre
@@ -124,7 +125,7 @@ const es = {
     "Achievements-Platzi-5": "Curso de Programación Básica",
     "Achievements-Platzi-6": "Fundamentos de Ingeniería de Software",
     "Achievements-Academic": "Entorno académico",
-    "Achievements-Academic-1": "Promedio de 4.7/5.0 durante toda mi carrera",
+    "Achievements-Academic-1": "Promedio de 4.7/5.0 acumulado durante toda mi carrera",
     "Achievemens-Additional-Knowledge": "Conocimientos adicionales",
     "Contact-LinkedIn": "Encuéntrame en LinkedIn",
     "Contact-GitHub": "Encuéntrame en GitHub",
