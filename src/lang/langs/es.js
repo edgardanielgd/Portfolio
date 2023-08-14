@@ -16,6 +16,11 @@ const es = {
         Soy estudiante de Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia, entusiasta por el 
         aprendizaje autónomo y la implementación de nuevas tendencias en proyectos reales.
     `,
+    "HomepageParagraph2": `
+        Tengo un título de Técnico en Programación de Software, mi pasión por este entorno comenzó cuando tenía unos 15 años,
+        desde entonces he estado aprendiendo y mejorando mis habilidades en diferentes áreas del desarrollo de software, como
+        Backend, Frontend, Bases de Datos, Inteligencia Artificial y la lista continúa!
+    `,
     "HostedWithGithub": "Alojado con Github Pages",
     "LastUpdate": "Última actualización: ",
     "Project-OfertappTitle": "OfertApp",

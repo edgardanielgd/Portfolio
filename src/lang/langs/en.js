@@ -16,6 +16,12 @@ const en = {
         I'm a Systems and Computing Engineering student at Universidad Nacional de Colombia, enthusiast for
         autonomous learning and the implementation of new trends in real projects.
     `,
+    "HomepageParagraph2": `
+        I have a Technician degree on Software Programming, my passion for this environment started
+        when i was about 15 years old, since then i have been learning and improving my skills in
+        different areas of software development, such as Backend, Frontend, Databases, Artificial Intelligence
+        and the list goes on!
+    `,
     "HostedWithGithub": "Hosted with Github Pages",
     "LastUpdate": "Last update: ",
     "Project-IdealistTitle": "Idealist (INDEV)",

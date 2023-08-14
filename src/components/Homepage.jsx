@@ -20,7 +20,14 @@ function HomepageView({lang, theme}){
                 <p className="portfolio-paragraph">{getString(lang, "HomepageDescription")}</p>
             </div>
             <div className="col-12 col-sm-7 mb-5">
-                <p className="portfolio-paragraph">{getString(lang, "HomepageParagraph1")}</p>
+                <div className="row">
+                    <div className="col-12 mb-3">
+                        <p className="portfolio-paragraph">{getString(lang, "HomepageParagraph1")}</p>
+                    </div>
+                    <div className="col-12">
+                        <p className="portfolio-paragraph">{getString(lang, "HomepageParagraph2")}</p>
+                    </div>
+                </div>
             </div>
             <div className="col-12 col-sm-5 mb-5 portfolio-homepage-profile text-center">
                 <img
@@ -62,7 +69,7 @@ function HomepageView({lang, theme}){
                     <div className = "col-12 col-sm-3 col-md-2 mb-3">
                     <div className="portfolio-framework-div">
                         <img
-                            src="https://nodejs.org/images/logos/nodejs.png"
+                            src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
                             alt="Node JS Logo"
                             className="portfolio-framework-logo"
                         />
