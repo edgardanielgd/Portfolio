@@ -1,11 +1,14 @@
+import React from "react";
 import getString from "./../lang/getString";
 import GithubProfile from "./../images/Github.jpg"
 import UNAL from "./../images/UNAL-light.png"
 import PageTitle from "../common/PageTitle";
 
 function HomepageView({lang, theme}){
+
     return (
         <div className="row">
+            
             <div className="col-12 text-center portfolio-main-title">
                 <PageTitle title={getString(lang, "HomepageDescriptionTitle")}/>
             </div>

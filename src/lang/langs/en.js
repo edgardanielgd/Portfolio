@@ -115,7 +115,7 @@ for solving real world problems
     `,
     "Profile-lang-skills-title": "Languages",
     "Profile-lang-skills-spanish": "Spanish - Native",
-    "Profile-lang-skills-english": "English - B1 (formarly)",
+    "Profile-lang-skills-english": "English - B1 (formely)",
     "Profile-experience-title": "Academical Experience",
     "Profile-teacher-assistant-title": "Teacher assistant",
     "Profile-teacher-assistant": `
