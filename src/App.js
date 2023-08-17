@@ -9,9 +9,11 @@ import AchievementsView from "./components/Achievements";
 import HomepageView from "./components/Homepage";
 
 import updateTheme from "./utils/updateTheme";
-import animateBackground from "./animation/animateBackground";
+import animationPkg from "./animation/animateBackground";
 
 import './App.css';
+
+const { animateBackground, keyPressHandler, mouseMovedHandler } = animationPkg;
 
 function App() {
 
@@ -33,6 +35,17 @@ function App() {
   updateTheme(theme);
 
   const requestRef = useRef();
+
+  // Register canvas event listeners
+  useEffect(() => {
+    window.addEventListener('keydown', (e) => keyPressHandler(e));
+    window.addEventListener('mousemove', (e) => mouseMovedHandler(e));
+    return () => {
+      window.removeEventListener('keydown', (e) => keyPressHandler(e));
+      window.removeEventListener('mousemove', (e) => mouseMovedHandler(e));
+    }
+
+  }, []);
 
   // Start the persistent animation loop
   useEffect(() => {

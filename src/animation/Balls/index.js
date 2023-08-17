@@ -37,6 +37,15 @@ class Balls extends AnimationActivity {
             ball.color = this.theme === "dark" ? "#999696" : "#77c95d";
         }
     }
+
+    onKeyPressed = (key) => {
+        console.log(key);
+        if (key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight') {
+            for (const ball of this.balls) {
+                ball.onKeyPressed(key);
+            }
+        }
+    }
 }
 
 export default Balls;

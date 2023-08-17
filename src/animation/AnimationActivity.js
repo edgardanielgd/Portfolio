@@ -17,6 +17,15 @@ class AnimationActivity {
     updateTheme(theme) {
         this.theme = theme;
     }
+
+    updateSize(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    onKeyPressed(key) { }
+
+    onMouseMoved(x, y) { }
 }
 
 export default AnimationActivity;
