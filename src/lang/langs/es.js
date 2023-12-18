@@ -23,6 +23,17 @@ const es = {
     `,
     "HostedWithGithub": "Alojado con Github Pages",
     "LastUpdate": "Última actualización: ",
+    "Project-IdealistTitle": "UIdealist (INDEV)",
+    "Project-IdealistTitle-description": `
+        Aplicación para la gestión de ideas y lluvias de ideas, así como proyectos, permite a los usuarios
+        evitar la procrastinación y realizar un seguimiento de las innovaciones personales y grupales motivando a los autores
+        y dándoles consejos y sentido de progreso
+        `,
+    "Project-SonderSyncTitle": "SonderSync (INDEV)",
+    "Project-SonderSyncTitle-description": `
+        Aplicación para conectar personas con intereses, áreas de trabajo y pasatiempos similares, permite a los usuarios
+        chatear a través de texto, audio y video
+        `,
     "Project-OfertappTitle": "OfertApp",
     "Project-OfertappTitle-description": `
         Tienda online con la particularidad de permitir a los usuarios crear subastas sobre los productos ofrecidos, los compradores pueden hacer ofertas
@@ -103,7 +114,7 @@ const es = {
     `,
     "Profile-lang-skills-title": "Idiomas",
     "Profile-lang-skills-spanish": "Español - Nativo",
-    "Profile-lang-skills-english": "Inglés - B1 (formalmente)",
+    "Profile-lang-skills-english": "Inglés - B1",
     "Profile-experience-title": "Experiencia académica",
     "Profile-teacher-assistant-title": "Monitor de cátedra",
     "Profile-teacher-assistant": `

@@ -2,8 +2,8 @@ import courseraLogo from "./../images/CourseraLogo.png";
 
 function CourseraItem({text, link}) {
     return (
-        <div className="col-12 text-center portfolio-coursera mb-3">
-            <div className="row">
+        <div className="col-12 col-sm-6 text-center mb-3">
+            <div className="row portfolio-coursera">
                 <div className="col-12 col-sm-3">
                     <img
                         src={courseraLogo}

@@ -13,8 +13,13 @@ function AchievementsView({lang}){
                 </p>
             </div>
             <div className="col-12 text-center mb-4">
+                <h4>{getString(lang, "Achievements-Academic")}</h4>
+                <p className="portfolio-paragraph">{getString(lang, "Achievements-Academic-1")}</p>
+            </div>
+            <div className="col-12 text-center mb-4">
                 <h4>{getString(lang, "Achievements-Courses")}</h4>
             </div>
+            
             <CourseraItem 
                 text = {getString(lang, "Achievements-Coursera-1")}
                 link = "https://www.coursera.org/account/accomplishments/certificate/WHFJPNTMAJSS"
@@ -51,10 +56,6 @@ function AchievementsView({lang}){
                 text = {getString(lang, "Achievements-Platzi-6")}
                 link = "https://platzi.com/p/edgardanielgd123/curso/1195-fundamentos-appsco/diploma/detalle/"
             />
-            <div className="col-12 text-center mb-4">
-                <h4>{getString(lang, "Achievements-Academic")}</h4>
-                <p className="portfolio-paragraph">{getString(lang, "Achievements-Academic-1")}</p>
-            </div>
         </div>
     );
 }

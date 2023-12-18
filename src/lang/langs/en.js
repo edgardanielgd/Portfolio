@@ -24,7 +24,7 @@ const en = {
     `,
     "HostedWithGithub": "Hosted with Github Pages",
     "LastUpdate": "Last update: ",
-    "Project-IdealistTitle": "Idealist (INDEV)",
+    "Project-IdealistTitle": "UIdealist (INDEV)",
     "Project-IdealistTitle-description": `
         Application for the management of ideas and brainstorms as well as projects, it allows users
         to prevent procrastination and keep track of personal and groupal innovations by motivating authors
@@ -115,7 +115,7 @@ for solving real world problems
     `,
     "Profile-lang-skills-title": "Languages",
     "Profile-lang-skills-spanish": "Spanish - Native",
-    "Profile-lang-skills-english": "English - B1 (formely)",
+    "Profile-lang-skills-english": "English - B1",
     "Profile-experience-title": "Academical Experience",
     "Profile-teacher-assistant-title": "Teacher assistant",
     "Profile-teacher-assistant": `

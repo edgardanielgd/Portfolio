@@ -2,8 +2,8 @@ import platziLogo from "./../images/PlatziLogo.webp";
 
 function PlatziItem({text, link}) {
     return (
-        <div className="col-12 text-center portfolio-platzi mb-3">
-            <div className="row">
+        <div className="col-12 col-sm-6 text-center mb-3">
+            <div className="row portfolio-platzi">
                 <div className="col-12 col-sm-3">
                     <img
                         src={platziLogo}
