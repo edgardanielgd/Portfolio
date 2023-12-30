@@ -1,24 +1,14 @@
 import platziLogo from "./../images/PlatziLogo.webp";
+import AcademyItem from "./AcademyItem";
 
 function PlatziItem({text, link}) {
-    return (
-        <div className="col-12 col-sm-6 text-center mb-3">
-            <div className="row portfolio-platzi">
-                <div className="col-12 col-sm-3">
-                    <img
-                        src={platziLogo}
-                        alt="Platzi"
-                        className="img-fluid portfolio-platzi-logo"
-                    />
-                </div>
-                <div className="col-12 col-sm-9 portfolio-course-container">
-                    <a href={link} className="portfolio-platzi-link">
-                        <h4>{text}</h4>
-                    </a>
-                </div>
-            </div>
-        </div>
-    )
+    return <AcademyItem
+        text = {text}
+        link = {link}
+        logo = {platziLogo}
+        alt = "Platzi Logo"
+        color = "#98CA3F"
+    />
 }
 
 export default PlatziItem;

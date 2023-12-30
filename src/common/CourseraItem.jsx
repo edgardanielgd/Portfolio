@@ -1,24 +1,14 @@
 import courseraLogo from "./../images/CourseraLogo.png";
+import AcademyItem from "./AcademyItem";
 
 function CourseraItem({text, link}) {
-    return (
-        <div className="col-12 col-sm-6 text-center mb-3">
-            <div className="row portfolio-coursera">
-                <div className="col-12 col-sm-3">
-                    <img
-                        src={courseraLogo}
-                        alt="Coursera"
-                        className="img-fluid portfolio-coursera-logo"
-                    />
-                </div>
-                <div className="col-12 col-sm-9 portfolio-course-container">
-                    <a href={link} className="portfolio-coursera-link">
-                        <h4>{text}</h4>
-                    </a>
-                </div>
-            </div>
-        </div>
-    )
+    return <AcademyItem
+        text = {text}
+        link = {link}
+        logo = {courseraLogo}
+        alt = "Coursera Logo"
+        color = "#0056D2"
+    />
 }
 
 export default CourseraItem;

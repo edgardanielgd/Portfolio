@@ -208,56 +208,32 @@
   border-width: 5px;
 }
 
-.portfolio-coursera-logo {
-  max-height: 100px;
+.portfolio-academy {
+  min-height: 100px;
   max-width: 100%;
-}
-
-.portfolio-coursera-link {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.portfolio-coursera-link:hover {
-  color: #ffffff;
-}
-
-.portfolio-platzi-link {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.portfolio-platzi-link:hover {
-  color: #ffffff;
-}
-
-.portfolio-platzi-logo {
-  max-height: 100px;
-  max-width: 100%;
-}
-
-.portfolio-coursera {
-  max-height: 100px;
-  max-width: 100%;
-  background-color: #0056D2;
+  align-items: center;
 
   animation-duration: 1s;
   animation-name: animate-course-entrance;
   animation-fill-mode: backwards;
+}
+
+.portfolio-academy-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.portfolio-academy-link:hover {
+  color: #ffffff;
+}
+
+.portfolio-academy-logo {
+  max-height: 100px;
+  max-width: 100%;
 }
 
 .portfolio-course-container {
   margin: auto;
-}
-
-.portfolio-platzi {
-  max-height: 100px;
-  max-width: 100%;
-  background-color: #98CA3F;
-
-  animation-duration: 1s;
-  animation-name: animate-course-entrance;
-  animation-fill-mode: backwards;
 }
 
 @keyframes animate-course-entrance {

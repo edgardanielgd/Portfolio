@@ -1,6 +1,8 @@
 import getString from "./../lang/getString";
 import CourseraItem from "../common/CourseraItem";
 import PlatziItem from "../common/PlatziItem";
+import AWSItem from "../common/AWSItem";
+import CiscoItem from "../common/CiscoItem";
 import PageTitle from "../common/PageTitle";
 
 function AchievementsView({lang}){
@@ -19,18 +21,37 @@ function AchievementsView({lang}){
             <div className="col-12 text-center mb-4">
                 <h4>{getString(lang, "Achievements-Courses")}</h4>
             </div>
-            
+            <CiscoItem
+                text = {getString(lang, "Achievements-Cisco-1")}
+                link = "https://www.credly.com/badges/b03768c0-b336-403a-bb42-cccdfc285ce1/public_url"
+            />
+            <AWSItem 
+                text = {getString(lang, "Achievements-AWS-2")}
+                link = "https://www.credly.com/badges/f54153f6-5920-4b32-8ca5-53c3d4a5e637/public_url"
+            />
+            <AWSItem 
+                text = {getString(lang, "Achievements-AWS-1")}
+                link = "https://www.credly.com/badges/5d7012a0-d553-4731-82fe-3dd975640370/public_url"
+            />
             <CourseraItem 
-                text = {getString(lang, "Achievements-Coursera-1")}
-                link = "https://www.coursera.org/account/accomplishments/certificate/WHFJPNTMAJSS"
+                text = {getString(lang, "Achievements-Coursera-5")}
+                link = "https://www.coursera.org/account/accomplishments/certificate/GYAPNACJMSQ7"
+            />
+            <CourseraItem 
+                text = {getString(lang, "Achievements-Coursera-4")}
+                link = "https://www.coursera.org/account/accomplishments/certificate/Q3F4MTSEM49S"
+            />
+            <CourseraItem 
+                text = {getString(lang, "Achievements-Coursera-3")}
+                link = "https://www.coursera.org/account/accomplishments/certificate/TECKCHLJWVVS"
             />
             <CourseraItem 
                 text = {getString(lang, "Achievements-Coursera-2")}
                 link = "https://www.coursera.org/account/accomplishments/certificate/WPY2P4QDZUMF"
             />
             <CourseraItem 
-                text = {getString(lang, "Achievements-Coursera-3")}
-                link = "https://www.coursera.org/account/accomplishments/certificate/TECKCHLJWVVS"
+                text = {getString(lang, "Achievements-Coursera-1")}
+                link = "https://www.coursera.org/account/accomplishments/certificate/WHFJPNTMAJSS"
             />
             <PlatziItem
                 text = {getString(lang, "Achievements-Platzi-1")}
