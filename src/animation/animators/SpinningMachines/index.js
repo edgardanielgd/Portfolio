@@ -4,8 +4,10 @@ import Gear from "./Gear";
 const num_gears = 10;
 
 class Gears extends AnimationActivity {
-    init() {
-        super.init();
+
+    init(context, width, height) {
+        super.init(context, width, height);
+
         this.gears = [];
         for (let i = 0; i < num_gears; i++) {
             this.gears.push(new Gear(

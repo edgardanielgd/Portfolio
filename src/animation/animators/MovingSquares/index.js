@@ -4,8 +4,9 @@ import Square from "./Square";
 const num_balls = 10;
 
 class MovingSquares extends AnimationActivity {
-    init() {
-        super.init();
+    init(context, width, height) {
+        super.init(context, width, height);
+
         this.squares = [];
         for (let i = 0; i < num_balls; i++) {
             this.squares.push(new Square(

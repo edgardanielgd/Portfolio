@@ -1,46 +1,66 @@
-import MovingSquares from "./MovingSquares";
-import Balls from "./Balls";
-import Gears from "./SpinningMachines";
+import MovingSquares from "./animators/MovingSquares";
+import Balls from "./animators/Balls";
+import Gears from "./animators/SpinningMachines";
+import Sphere from "./animators/Sphere";
+import actualMod from "../utils/actualMod";
+import { config as themeConfig } from "../utils/updateTheme";
+import { hex2rgb } from "../utils/hexToRGB";
 
-let animationType = "circles";
+const animators = [
+    // new Sphere(),
+    new Balls(),
+    // new MovingSquares("2d"),
+    // new Gears("2d"),
+]
+
+let currentAnimatorIndex = 0;
 let started = false;
 
-// Animation activities
-let balls = null;
-let squares = null;
-let gears = null;
+const CONTEXT_TYPE = "2d"
 
 const animateBackground = (element, theme, time, requestRef) => {
 
-    const context = element.getContext("2d");
+    //const context = element.getContext("experimental-webgl") || element.getContext("webgl");
+    const context = CONTEXT_TYPE == "2d" ?
+        element.getContext("2d") :
+        element.getContext("webgl") || element.getContext("experimental-webgl");
+
     const width = element.width;
     const height = element.height;
 
     if (!started) {
-        balls = new Balls(context, element.width, element.height);
-        balls.init();
-
-        squares = new MovingSquares(context, element.width, element.height);
-        squares.init();
-
-        gears = new Gears(context, element.width, element.height);
-        gears.init();
+        animators.forEach(animation => {
+            animation.init(
+                context, width, height
+            );
+        })
 
         started = true;
     } else {
         // Update animations canvas size
-        balls.updateSize(width, height);
-        squares.updateSize(width, height);
-        gears.updateSize(width, height);
+        animators.forEach(animation => {
+            animation.updateSize(
+                width, height
+            );
+        })
     }
 
     // Update theme
-    balls.updateTheme(theme);
-    squares.updateTheme(theme);
-    gears.updateTheme(theme);
+    animators.forEach(animation => {
+        animation.updateTheme(theme);
+    })
 
     // Clear the canvas
-    context.clearRect(0, 0, width, height);
+    if (CONTEXT_TYPE == "2d") {
+        context.clearRect(0, 0, width, height);
+    } else {
+        const backgroundColor = themeConfig["--portfolio-background-color"][theme];
+        const [r, g, b] = hex2rgb(backgroundColor);
+        context.clearColor(
+            r / 255, g / 255, b / 255, 1.0
+        );
+        context.clear(context.COLOR_BUFFER_BIT);
+    }
 
     // Readjust canvas size
     if (element.width !== element.clientWidth || element.height !== element.clientHeight) {
@@ -48,19 +68,7 @@ const animateBackground = (element, theme, time, requestRef) => {
         element.height = element.clientHeight;
     }
 
-    switch (animationType) {
-        case "circles":
-            balls.draw();
-            break;
-        case "squares":
-            squares.draw();
-            break;
-        case "gears":
-            gears.draw();
-            break;
-        default:
-            break;
-    }
+    animators[currentAnimatorIndex].draw();
 
     // Call next animate frame
     requestRef.current = requestAnimationFrame((time) => {
@@ -72,26 +80,17 @@ const keyPressHandler = (event) => {
 
     // Check if animation type should be changed
     if (event.key === "e") {
-        if (animationType === "circles") {
-            animationType = "squares";
-        } else if (animationType === "squares") {
-            animationType = "gears";
-        } else {
-            animationType = "circles";
-        }
+        currentAnimatorIndex = actualMod(currentAnimatorIndex + 1, animators.length);
+    } else if (event.key === "q") {
+        currentAnimatorIndex = actualMod(currentAnimatorIndex - 1, animators.length);
     }
 
-    if (balls && squares) {
-        balls.onKeyPressed(event.key);
-        squares.onKeyPressed(event.key);
-    }
+    // Call key press handler for current animation
+    animators[currentAnimatorIndex].onKeyPressed(event.key);
 }
 
 const mouseMovedHandler = (event) => {
-    if (balls && squares) {
-        balls.onMouseMoved(event.clientX, event.clientY);
-        squares.onMouseMoved(event.clientX, event.clientY);
-    }
+    animators[currentAnimatorIndex].onMouseMoved(event.clientX, event.clientY);
 }
 
 const animationPkg = {

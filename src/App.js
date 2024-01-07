@@ -8,7 +8,7 @@ import ContactView from "./components/Contact";
 import AchievementsView from "./components/Achievements";
 import HomepageView from "./components/Homepage";
 
-import updateTheme from "./utils/updateTheme";
+import { updateTheme } from "./utils/updateTheme";
 import animationPkg from "./animation/animateBackground";
 
 import './App.css';

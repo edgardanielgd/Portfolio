@@ -4,15 +4,18 @@ import Ball from "./Ball";
 const num_balls = 25;
 
 class Balls extends AnimationActivity {
-    init() {
-        super.init();
+
+
+    init(context, width, height) {
+        super.init(context, width, height);
+
         this.balls = [];
         for (let i = 0; i < num_balls; i++) {
             this.balls.push(new Ball(
                 Math.random() * this.width,
                 Math.random() * this.height,
                 Math.random() * 30 + 10,
-                this.theme === "dark" ? "#999696" : "#77c95d",
+                this.animationColor,
                 Math.random() * 2 - 1,
                 Math.random() * 2 - 1
             ))
@@ -34,12 +37,11 @@ class Balls extends AnimationActivity {
     updateTheme(theme) {
         super.updateTheme(theme);
         for (const ball of this.balls) {
-            ball.color = this.theme === "dark" ? "#999696" : "#77c95d";
+            ball.color = this.animationColor;
         }
     }
 
     onKeyPressed = (key) => {
-        console.log(key);
         if (key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight') {
             for (const ball of this.balls) {
                 ball.onKeyPressed(key);

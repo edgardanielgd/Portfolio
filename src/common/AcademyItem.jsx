@@ -1,4 +1,4 @@
-function AcademyItem({text, link, logo, alt, color}) {
+function AcademyItem({text, link, logo, alt, color, textColor="0xFFFFFF"}) {
     return (
         <div className="col-12 col-sm-6 text-center mb-3">
             <a href={link} className="portfolio-academy-link" target="_blank">
@@ -16,7 +16,13 @@ function AcademyItem({text, link, logo, alt, color}) {
                     />
                 </div>
                 <div className="col-12 col-sm-9 portfolio-course-container">
-                        <h4>{text}</h4>
+                        <h4
+                            style={{
+                                color: textColor
+                            }}
+                        >
+                            {text}
+                        </h4>
                 </div>
             </div>
             </a>
