@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.295e1279.css",
-    "main.js": "/Portfolio/static/js/main.662be753.js",
+    "main.js": "/Portfolio/static/js/main.158e9e5c.js",
     "static/js/787.b98c23e5.chunk.js": "/Portfolio/static/js/787.b98c23e5.chunk.js",
     "static/media/UNAL-light.png": "/Portfolio/static/media/UNAL-light.3d80c500e0e80746a755.png",
     "static/media/Edgar.jpg": "/Portfolio/static/media/Edgar.75fb5f4f60c9e6031fe5.jpg",
@@ -14,11 +14,11 @@
     "index.html": "/Portfolio/index.html",
     "static/media/PlatziLogo.webp": "/Portfolio/static/media/PlatziLogo.5a0b5a23361c62941276.webp",
     "main.295e1279.css.map": "/Portfolio/static/css/main.295e1279.css.map",
-    "main.662be753.js.map": "/Portfolio/static/js/main.662be753.js.map",
+    "main.158e9e5c.js.map": "/Portfolio/static/js/main.158e9e5c.js.map",
     "787.b98c23e5.chunk.js.map": "/Portfolio/static/js/787.b98c23e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.295e1279.css",
-    "static/js/main.662be753.js"
+    "static/js/main.158e9e5c.js"
   ]
 }
