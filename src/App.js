@@ -9,11 +9,11 @@ import AchievementsView from "./components/Achievements";
 import HomepageView from "./components/Homepage";
 
 import { updateTheme } from "./utils/updateTheme";
-import animationPkg from "./animation/animateBackground";
+import { handleTheneChange, initializeAnimation } from "./animation/animateBackground";
+
+import config from "./config";
 
 import './App.css';
-
-const { animateBackground, keyPressHandler, mouseMovedHandler } = animationPkg;
 
 function App() {
 
@@ -34,44 +34,35 @@ function App() {
 
   updateTheme(theme);
 
-  const requestRef = useRef();
-
-  // Register canvas event listeners
-  useEffect(() => {
-    window.addEventListener('keydown', (e) => keyPressHandler(e));
-    window.addEventListener('mousemove', (e) => mouseMovedHandler(e));
-    return () => {
-      window.removeEventListener('keydown', (e) => keyPressHandler(e));
-      window.removeEventListener('mousemove', (e) => mouseMovedHandler(e));
-    }
-
-  }, []);
+  const canvasRef = useRef();
 
   // Start the persistent animation loop
   useEffect(() => {
-    requestRef.current = requestAnimationFrame((time) => {
-      animateBackground(canvasTarget.current, theme, time, requestRef);
-    });
-
-    return () => cancelAnimationFrame(requestRef.current);
+    handleTheneChange(theme);
   }, [theme]);
 
-  // We'll draw over the main container
-  const canvasTarget = useRef();
+  useEffect(() => {
+    initializeAnimation(canvasRef.current);
+  }, []);
 
   return (
     <div className="portfolio-main-body">
       <Navbar theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
       <main className="container portfolio-container" style={{ position: 'relative' }}>
 
-        <canvas ref={canvasTarget} style={{
+
+        <div id={config.ANIMATION_CONTAINER_ID} style={{
           position: 'absolute',
           top: 0,
           left: 0,
-          pointerEvents: 'none',
-          zIndex: 0
-        }}
-        ></canvas>
+          zIndex: 0,
+          width: '100%',
+          height: '100%'
+        }} >
+          <canvas
+            ref={canvasRef}
+          />
+        </div>
 
         <div style={{
           zIndex: 1,
@@ -86,7 +77,7 @@ function App() {
           </Routes>
         </div>
 
-      </main>
+      </main >
       <Footer lang={lang} />
     </div >
   );

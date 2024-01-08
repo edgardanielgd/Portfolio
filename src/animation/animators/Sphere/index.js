@@ -1,99 +1,74 @@
 import AnimationActivity from "../AnimationActivity";
 import { vertShader } from "./vertShader";
 import { fragShader } from "./fragShader";
-import { initShaderProgram } from "../../webgl/initShaders"
-import { initBuffers } from "../../webgl/initBuffer";
-import { setVertexAttrib } from "../../webgl/vertexAttrib";
-import { mat4 } from "gl-matrix";
+import { hex2rgb } from "./../../../utils/hexToRGB"
+
+import p5 from "p5";
 
 class Sphere extends AnimationActivity {
 
-    init(context, width, height) {
-        super.init(context, width, height);
+    init() {
+        super.init();
+    }
 
-        const shaderProgram = initShaderProgram(context, vertShader, fragShader);
+    onSetup() {
+        this.camera = this.sk.createCamera();
 
-        this.programInfo = {
-            program: shaderProgram,
-            attribLocations: {
-                vertexPosition: context.getAttribLocation(shaderProgram, "aVertexPosition"),
-            },
-            uniformLocations: {
-                projectionMatrix: context.getUniformLocation(shaderProgram, "uProjectionMatrix"),
-                modelViewMatrix: context.getUniformLocation(shaderProgram, "uModelViewMatrix"),
-            },
-        };
+        this.shader = new p5.Shader(
+            this.sk._renderer, vertShader, fragShader
+        );
 
-        this.buffers = initBuffers(context, [
-            [0.0, 0.0, -1.0, 1.0, 0.0, 0.0, -1.0, -1.0]
-        ]);
+        this.setCameraPosition(this.width, 0, 0);
+    }
+
+    setSketch(sk) {
+        super.setSketch(sk);
     }
 
     reset() {
         this.init();
     }
 
-    draw() {
+    draw(animationColor) {
+        this.sk.push();
 
-        this.context.clearDepth(1.0); // Clear everything
-        this.context.enable(this.context.DEPTH_TEST); // Enable depth testing
-        this.context.depthFunc(this.context.LEQUAL); // Near things obscure far things
+        const [r, g, b] = hex2rgb(animationColor);
+        this.shader.setUniform('uColor', [r / 255, g / 255, b / 255])
 
-        this.context.clear(this.context.COLOR_BUFFER_BIT | this.context.DEPTH_BUFFER_BIT);
+        this.sk.shader(this.shader);
+        this.sk.stroke(animationColor)
+        this.sk.sphere(this.width / 3)
 
-        const fieldOfView = (45 * Math.PI) / 180; // in radians
-        const aspect = this.context.canvas.clientWidth / this.context.canvas.clientHeight;
-        const zNear = 0.1;
-        const zFar = 100.0;
-        const projectionMatrix = mat4.create();
-
-        mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
-
-        const modelViewMatrix = mat4.create();
-
-        mat4.translate(
-            modelViewMatrix, // destination matrix
-            modelViewMatrix, // matrix to translate
-            [0.0, 0.0, -1.0],
-        );
-
-        setVertexAttrib(
-            this.context, this.buffers[0],
-            this.programInfo.attribLocations.vertexPosition,
-            this.context.FLOAT,
-            2, false, 0, 0
-        )
-
-        this.context.useProgram(this.programInfo.program);
-
-        this.context.uniformMatrix4fv(
-            this.programInfo.uniformLocations.projectionMatrix,
-            false,
-            projectionMatrix,
-        );
-
-        this.context.uniformMatrix4fv(
-            this.programInfo.uniformLocations.modelViewMatrix,
-            false,
-            modelViewMatrix,
-        );
-
-        {
-            const offset = 0;
-            const vertexCount = 4;
-            this.context.drawArrays(
-                this.context.TRIANGLE_STRIP, offset, vertexCount
-            );
-        }
-
-
-    }
-
-    updateTheme(theme) {
-        super.updateTheme(theme);
+        this.sk.pop();
     }
 
     onKeyPressed = (key) => {
+        if (key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight') {
+            for (const ball of this.balls) {
+                ball.onKeyPressed(key);
+            }
+        }
+    }
+
+    setCameraPosition = (p, pi, phi) => {
+        const x_camera = p * this.sk.sin(pi) * this.sk.cos(phi);
+        const y_camera = p * this.sk.sin(pi) * this.sk.sin(phi);
+        const z_camera = p * this.sk.cos(pi);
+
+        this.camera.setPosition(x_camera, y_camera, z_camera);
+        this.camera.lookAt(0, 0, 0);
+    }
+
+    onMouseMoved = (x, y) => {
+
+        if (this.camera) {
+            // Use Spherical coords to move the camera
+            const radius = this.width;
+            const pi = this.sk.map(y, 0, this.height, 0, 2 * this.sk.PI);
+            const phi = this.sk.map(x, 0, this.width, 0, this.sk.PI);
+
+            this.setCameraPosition(radius, pi, phi);
+        }
 
     }
 }

@@ -1,30 +1,29 @@
-import { hex2rgb } from "../../utils/hexToRGB";
-import { config as themeConfig } from "../../utils/updateTheme";
-
 class AnimationActivity {
 
     constructor() {
+
+        this.sk = null;
+        this.width = 0;
+        this.height = 0;
+
         this.initialized = false;
-        this.animationColor = themeConfig["animation-color"]["light"];
-        this.animationColorRGB = hex2rgb(this.animationColor);
     }
 
-    init(context, width, height) {
-        this.context = context;
-        this.width = width;
-        this.height = height;
+    onSetup() {
+        // Callend of p5's setup function
+    }
+
+    init() {
         this.initialized = true;
+    }
+
+    setSketch(sk) {
+        this.sk = sk;
     }
 
     reset() { }
 
-    draw() { }
-
-    updateTheme(theme) {
-        this.theme = theme;
-        this.animationColor = themeConfig["animation-color"][theme];
-        this.animationColorRGB = hex2rgb(this.animationColor);
-    }
+    draw(animationColor) { }
 
     updateSize(width, height) {
         this.width = width;

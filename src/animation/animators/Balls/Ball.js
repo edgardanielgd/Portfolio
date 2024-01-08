@@ -12,21 +12,22 @@ class Ball {
         this.y_velocity = y_velocity_initial;
     }
 
-    draw = (context) => {
-        context.beginPath();
-        context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
-        context.fillStyle = this.color;
-        context.fill();
-        context.closePath();
+    draw = (sk, color) => {
+        sk.push();
+        sk.fill(color);
+        sk.noStroke();
+        sk.translate(this.x, this.y, 0);
+        sk.ellipsoid(this.radius, this.radius, this.radius);
+        sk.pop();
     }
 
     update = (width, height) => {
         // Check if the ball is out of bounds
-        if (this.x + this.radius > width || this.x - this.radius < 0) {
+        if (this.x + this.radius > width / 2 || this.x - this.radius < -width / 2) {
             this.x_velocity = -this.x_velocity * 0.95;
         }
 
-        if (this.y + this.radius > height || this.y - this.radius < 0) {
+        if (this.y + this.radius > height / 2 || this.y - this.radius < -height / 2) {
             this.y_velocity = -this.y_velocity * 0.95;
         }
 

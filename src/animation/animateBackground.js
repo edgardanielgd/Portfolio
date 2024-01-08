@@ -1,42 +1,39 @@
-import MovingSquares from "./animators/MovingSquares";
 import Balls from "./animators/Balls";
-import Gears from "./animators/SpinningMachines";
 import Sphere from "./animators/Sphere";
 import actualMod from "../utils/actualMod";
 import { config as themeConfig } from "../utils/updateTheme";
-import { hex2rgb } from "../utils/hexToRGB";
+import p5 from "p5";
+import config from "../config";
 
 const animators = [
-    // new Sphere(),
+    new Sphere(),
     new Balls(),
-    // new MovingSquares("2d"),
-    // new Gears("2d"),
+
 ]
 
+const CONTEXT_TYPE = "webgl"
+
 let currentAnimatorIndex = 0;
+
+let P5 = null;
+let targetCanvas = null;
 let started = false;
+let currentTheme = "light";
 
-const CONTEXT_TYPE = "2d"
+const getParentSize = () => {
+    const parent = document.getElementById(config.ANIMATION_CONTAINER_ID);
+    return {
+        width: parent.clientWidth,
+        height: parent.clientHeight
+    }
+}
 
-const animateBackground = (element, theme, time, requestRef) => {
+const s = (sk) => {
 
-    //const context = element.getContext("experimental-webgl") || element.getContext("webgl");
-    const context = CONTEXT_TYPE == "2d" ?
-        element.getContext("2d") :
-        element.getContext("webgl") || element.getContext("experimental-webgl");
+    const updateCanvasSize = () => {
+        const { width, height } = getParentSize();
+        sk.resizeCanvas(width, height);
 
-    const width = element.width;
-    const height = element.height;
-
-    if (!started) {
-        animators.forEach(animation => {
-            animation.init(
-                context, width, height
-            );
-        })
-
-        started = true;
-    } else {
         // Update animations canvas size
         animators.forEach(animation => {
             animation.updateSize(
@@ -45,58 +42,79 @@ const animateBackground = (element, theme, time, requestRef) => {
         })
     }
 
-    // Update theme
     animators.forEach(animation => {
-        animation.updateTheme(theme);
-    })
+        animation.setSketch(sk);
+    });
 
-    // Clear the canvas
-    if (CONTEXT_TYPE == "2d") {
-        context.clearRect(0, 0, width, height);
-    } else {
-        const backgroundColor = themeConfig["--portfolio-background-color"][theme];
-        const [r, g, b] = hex2rgb(backgroundColor);
-        context.clearColor(
-            r / 255, g / 255, b / 255, 1.0
-        );
-        context.clear(context.COLOR_BUFFER_BIT);
+    sk.setup = () => {
+        const renderer = CONTEXT_TYPE == "2d" ? sk.P2D : sk.WEBGL;
+        sk.createCanvas(1, 1, renderer, targetCanvas);
+        updateCanvasSize();
+
+        animators.forEach(animation => {
+            animation.onSetup();
+        });
     }
 
-    // Readjust canvas size
-    if (element.width !== element.clientWidth || element.height !== element.clientHeight) {
-        element.width = element.clientWidth;
-        element.height = element.clientHeight;
+    sk.draw = () => {
+        const backgroundColor = themeConfig["--portfolio-background-color"][currentTheme];
+        sk.background(backgroundColor);
+
+        const animationColor = themeConfig["animation-color"][currentTheme];
+        animators[currentAnimatorIndex].draw(animationColor);
     }
 
-    animators[currentAnimatorIndex].draw();
-
-    // Call next animate frame
-    requestRef.current = requestAnimationFrame((time) => {
-        animateBackground(element, theme, time, requestRef);
-    })
-}
-
-const keyPressHandler = (event) => {
-
-    // Check if animation type should be changed
-    if (event.key === "e") {
-        currentAnimatorIndex = actualMod(currentAnimatorIndex + 1, animators.length);
-    } else if (event.key === "q") {
-        currentAnimatorIndex = actualMod(currentAnimatorIndex - 1, animators.length);
+    sk.windowResized = () => {
+        updateCanvasSize();
     }
 
-    // Call key press handler for current animation
-    animators[currentAnimatorIndex].onKeyPressed(event.key);
+    sk.keyPressed = () => {
+        if (sk.key === "e") {
+            currentAnimatorIndex = actualMod(currentAnimatorIndex + 1, animators.length);
+        } else if (sk.key === "q") {
+            currentAnimatorIndex = actualMod(currentAnimatorIndex - 1, animators.length);
+        }
+
+        if (started) {
+            animators[currentAnimatorIndex].onKeyPressed(sk.key);
+        }
+    }
+
+    sk.mouseMoved = () => {
+        // Transit between animations
+        if (started) {
+            animators[currentAnimatorIndex].onMouseMoved(sk.mouseX, sk.mouseY);
+        }
+    }
 }
 
-const mouseMovedHandler = (event) => {
-    animators[currentAnimatorIndex].onMouseMoved(event.clientX, event.clientY);
+
+export const handleTheneChange = (theme) => {
+    currentTheme = theme;
 }
 
-const animationPkg = {
-    animateBackground,
-    keyPressHandler,
-    mouseMovedHandler
-}
+export const initializeAnimation = (canvas) => {
 
-export default animationPkg;
+    // Start the persistent animation loop
+    targetCanvas = canvas;
+
+    if (P5) {
+        P5.remove();
+    }
+
+    P5 = new p5(s);
+
+    if (!started) {
+        started = true;
+
+        const { width, height } = getParentSize();
+
+        animators.forEach(animation => {
+            animation.updateSize(
+                width, height
+            );
+            animation.init();
+        });
+    }
+
+}

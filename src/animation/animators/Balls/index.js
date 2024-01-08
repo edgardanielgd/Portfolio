@@ -5,39 +5,30 @@ const num_balls = 25;
 
 class Balls extends AnimationActivity {
 
-
-    init(context, width, height) {
-        super.init(context, width, height);
+    init() {
+        super.init();
 
         this.balls = [];
         for (let i = 0; i < num_balls; i++) {
             this.balls.push(new Ball(
-                Math.random() * this.width,
-                Math.random() * this.height,
+                Math.random() * this.width - this.width / 2,
+                Math.random() * this.height - this.height / 2,
                 Math.random() * 30 + 10,
                 this.animationColor,
-                Math.random() * 2 - 1,
-                Math.random() * 2 - 1
+                Math.random() * 6 - 3,
+                Math.random() * 6 - 3
             ))
         }
-        this.draw();
     }
 
     reset() {
         this.init();
     }
 
-    draw() {
+    draw(animationColor) {
         for (const ball of this.balls) {
             ball.update(this.width, this.height);
-            ball.draw(this.context);
-        }
-    }
-
-    updateTheme(theme) {
-        super.updateTheme(theme);
-        for (const ball of this.balls) {
-            ball.color = this.animationColor;
+            ball.draw(this.sk, animationColor);
         }
     }
 
