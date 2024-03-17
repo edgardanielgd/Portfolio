@@ -70,18 +70,23 @@
 }
 
 .portfolio-framework-logo {
-  max-height: 80px !important;
+  max-height: 80px;
   max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 .portfolio-framework-div {
+  display: flex;
+  text-align: center;
+
   background-color: #ffffff;
   color: var(--portfolio-secondary-text-color);
-  border-radius: 50%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  border: var(--portfolio-navbar-background-color) solid 2px;
+  border-radius: 10%;
+
+  height: 100%;
+  padding: 20px;
 
   animation-duration: 1s;
   animation-name: animate-framework-div-entrance;
@@ -91,12 +96,10 @@
 @keyframes animate-framework-div-entrance {
   0% {
     opacity: 0;
-    rotate: 360deg;
   }
 
   100% {
     opacity: 1;
-    rotate: 0deg;
   }
 }
 

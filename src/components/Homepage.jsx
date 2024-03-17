@@ -12,16 +12,19 @@ function HomepageView({lang, theme}){
             <div className="col-12 text-center portfolio-main-title">
                 <PageTitle title={getString(lang, "HomepageDescriptionTitle")}/>
             </div>
-            <div className="col-12 col-sm-5 mb-5 portfolio-homepage-profile text-center">
-                <img
-                    src={GithubProfile}
-                    alt="Github"
-                    className="portfolio-homepage-profile-image"
-                />
+            <div className="col-12 col-sm-5 m-auto portfolio-homepage-profile text-center">
+                <a href="https://github.com/edgardanielgd">
+                    <img
+                        src={GithubProfile}
+                        alt="Github"
+                        className="portfolio-homepage-profile-image"
+                    />
+                </a>
             </div>
-            <div className="col-12 col-sm-7 mb-5">
+            <div className="col-12 col-sm-7 align-middle m-auto">
                 <p className="portfolio-paragraph">{getString(lang, "HomepageDescription")}</p>
             </div>
+            <div className="mb-5"></div>
             <div className="col-12 col-sm-7 mb-5">
                 <div className="row">
                     <div className="col-12 mb-3">
