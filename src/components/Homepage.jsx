@@ -5,7 +5,7 @@ import TensorflowLogo from "./../images/TensorflowLogo.png";
 import UNAL from "./../images/UNAL-light.png"
 import PageTitle from "../common/PageTitle";
 
-function HomepageView({lang, theme}){
+function HomepageView({lang}){
 
     return (
         <div className="row">
