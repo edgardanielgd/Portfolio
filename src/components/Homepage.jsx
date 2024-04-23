@@ -1,6 +1,7 @@
 import React from "react";
 import getString from "./../lang/getString";
 import GithubProfile from "./../images/Github.jpg"
+import TensorflowLogo from "./../images/TensorflowLogo.png";
 import UNAL from "./../images/UNAL-light.png"
 import PageTitle from "../common/PageTitle";
 
@@ -75,8 +76,8 @@ function HomepageView({lang, theme}){
                     <div className = "col-12 col-sm-3 col-md-2 mb-3">
                     <div className="portfolio-framework-div">
                         <img
-                            src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
-                            alt="Node JS Logo"
+                            src={TensorflowLogo}
+                            alt="Tensorflow Logo"
                             className="portfolio-framework-logo"
                         />
                     </div>

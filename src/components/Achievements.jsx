@@ -24,7 +24,7 @@ function AchievementsView({lang}){
             </div>
             <GCPItem
                 text = {getString(lang, "Achievements-GCP-1")}
-                link = "https://media.licdn.com/dms/document/media/D4E2DAQERH5NPeKXqnQ/profile-treasury-document-pdf-analyzed/0/1701998206423?e=1705536000&v=beta&t=OnIIsjL4a4q4c85abSIEBjLqf4vWZK_qPY8OUyyZXt0"
+                link = "GCP.pdf"
             />
             <CiscoItem
                 text = {getString(lang, "Achievements-Cisco-1")}
