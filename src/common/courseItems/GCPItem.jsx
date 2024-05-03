@@ -1,4 +1,4 @@
-import gcpLogo from "./../images/GCPLogo.png";
+import gcpLogo from "./../../images/GCPLogo.png";
 import AcademyItem from "./AcademyItem";
 
 function GCPItem({text, link}) {

@@ -1,4 +1,4 @@
-import platziLogo from "./../images/PlatziLogo.webp";
+import platziLogo from "./../../images/PlatziLogo.webp";
 import AcademyItem from "./AcademyItem";
 
 function PlatziItem({text, link}) {

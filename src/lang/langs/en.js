@@ -22,7 +22,17 @@ const en = {
         different areas of software development, such as Backend, Frontend, Databases, Artificial Intelligence
         and the list goes on!
     `,
+    "HomepageTechnologiesTitleProgrammingLanguages": "Programming languages",
+    "HomepageTechnologiesDescriptionProgrammingLanguages": "Here you'll find a list of the programming languages i have used in my projects",
+    "HomepageTechnologiesTitleDatabases": "Databases",
+    "HomepageTechnologiesDescriptionDatabases": "Here you'll find a list of the database related technologies that have been useful for my projects",
+    "HomepageTechnologiesTitleFrameworks": "Web Frameworks",
+    "HomepageTechnologiesDescriptionFrameworks": "Here you'll find a list of web development frameworks i have used",
     "HostedWithGithub": "Hosted with Github Pages",
+    "HomepageTechnologiesTitleMachineLearning": "Machine Learning, Data Engineering and Data Science",
+    "HomepageTechnologiesDescriptionMachineLearning": "Here you'll find a list of the Machine Learning technologies i have practiced through my projects and courses i have taken",
+    "HomepageTechnologiesTitleMiscellaneous": "Miscellaneous",
+    "HomepageTechnologiesDescriptionMiscellaneous": "Technologies related to a wide range of environments and purposes",
     "LastUpdate": "Last update: ",
     "Project-IdealistTitle": "UIdealist (INDEV)",
     "Project-IdealistTitle-description": `
@@ -97,7 +107,7 @@ Knowledge in Frontend development with React JS
 Knowledge in version control systems: Git and GitHub
     `,
     "Profile-skills-4": `
-Knowledge in databases managemente and schema design: MySQL, PostgreSQL and MongoDB
+Knowledge in databases management and schema design: MySQL, PostgreSQL and MongoDB
     `,
     "Profile-skills-5": `
 Knowledge in implementation and deployment of Specialized Data Structures and Algorithms
@@ -155,6 +165,7 @@ for solving real world problems
     "Contact-LinkedIn": "Find me in LinkedIn",
     "Contact-GitHub": "Find me in GitHub",
     "Contact-Email": "Contact me via email",
+    "FreePik": "Icons by Freepik (https://www.freepik.com/) and Icons8 (https://icons8.com)",
 }
 
 export default en;

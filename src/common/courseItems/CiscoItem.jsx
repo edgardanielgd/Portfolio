@@ -1,4 +1,4 @@
-import ciscoLogo from "./../images/CiscoLogo.png";
+import ciscoLogo from "./../../images/CiscoLogo.png";
 import AcademyItem from "./AcademyItem";
 
 function CiscoItem({text, link}) {

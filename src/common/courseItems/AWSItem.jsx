@@ -1,4 +1,4 @@
-import awsLogo from "./../images/AWSLogo.png";
+import awsLogo from "./../../images/AWSLogo.png";
 import AcademyItem from "./AcademyItem";
 
 function AWSItem({text, link}) {

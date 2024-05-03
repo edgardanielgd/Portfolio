@@ -1,9 +1,9 @@
 import getString from "./../lang/getString";
-import CourseraItem from "../common/CourseraItem";
-import PlatziItem from "../common/PlatziItem";
-import AWSItem from "../common/AWSItem";
-import CiscoItem from "../common/CiscoItem";
-import GCPItem from "../common/GCPItem";
+import CourseraItem from "../common/courseItems/CourseraItem";
+import PlatziItem from "../common/courseItems/PlatziItem";
+import AWSItem from "../common/courseItems/AWSItem";
+import CiscoItem from "../common/courseItems/CiscoItem";
+import GCPItem from "../common/courseItems/GCPItem";
 import PageTitle from "../common/PageTitle";
 
 function AchievementsView({lang}){

@@ -1,4 +1,4 @@
-import courseraLogo from "./../images/CourseraLogo.png";
+import courseraLogo from "./../../images/CourseraLogo.png";
 import AcademyItem from "./AcademyItem";
 
 function CourseraItem({text, link}) {

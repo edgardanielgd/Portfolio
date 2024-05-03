@@ -21,6 +21,16 @@ const es = {
         desde entonces he estado aprendiendo y mejorando mis habilidades en diferentes áreas del desarrollo de software, como
         Backend, Frontend, Bases de Datos, Inteligencia Artificial y la lista continúa!
     `,
+    "HomepageTechnologiesTitleProgrammingLanguages": "Lenguajes de Programación",
+    "HomepageTechnologiesDescriptionProgrammingLanguages": "Lenguajes de programación que conozzco y con los que he trabajado",
+    "HomepageTechnologiesTitleDatabases": "Bases de datos",
+    "HomepageTechnologiesDescriptionDatabases": "Tecnologías relacionadas con bases de datos que han sido útiles para mis proyectos",
+    "HomepageTechnologiesTitleFrameworks": "Frameworks Web",
+    "HomepageTechnologiesDescriptionFrameworks": "Frameworks de desarrollo web que he utilizado",
+    "HomepageTechnologiesTitleMachineLearning": "Aprendizaje Automático, Ingeniería de datos y Ciencia de Datos",
+    "HomepageTechnologiesDescriptionMachineLearning": "Tecnologías relacionadas con Machine Learning que he utilizado en proyectos y cursos",
+    "HomepageTechnologiesTitleMiscellaneous": "Misceláneos",
+    "HomepageTechnologiesDescriptionMiscellaneous": "Tecnologías relacionadas a un amplio rango de entornos y propósitos",
     "HostedWithGithub": "Alojado con Github Pages",
     "LastUpdate": "Última actualización: ",
     "Project-IdealistTitle": "UIdealist (INDEV)",
@@ -154,6 +164,7 @@ const es = {
     "Contact-LinkedIn": "Encuéntrame en LinkedIn",
     "Contact-GitHub": "Encuéntrame en GitHub",
     "Contact-Email": "Contáctame por correo electrónico",
+    "FreePik": "Iconos por Freepik (https://www.freepik.com/) y Icons8 (https://icons8.com)",
 }
 
 export default es;
