@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.005d6b5d.css",
-    "main.js": "/Portfolio/static/js/main.423ea7cc.js",
+    "main.js": "/Portfolio/static/js/main.933591ef.js",
     "static/js/787.b98c23e5.chunk.js": "/Portfolio/static/js/787.b98c23e5.chunk.js",
     "static/media/UNAL-light.png": "/Portfolio/static/media/UNAL-light.3d80c500e0e80746a755.png",
     "static/media/TensorflowLogo.png": "/Portfolio/static/media/TensorflowLogo.2e600df8bf7dc40e2886.png",
@@ -24,11 +24,11 @@
     "index.html": "/Portfolio/index.html",
     "static/media/PlatziLogo.webp": "/Portfolio/static/media/PlatziLogo.5a0b5a23361c62941276.webp",
     "main.005d6b5d.css.map": "/Portfolio/static/css/main.005d6b5d.css.map",
-    "main.423ea7cc.js.map": "/Portfolio/static/js/main.423ea7cc.js.map",
+    "main.933591ef.js.map": "/Portfolio/static/js/main.933591ef.js.map",
     "787.b98c23e5.chunk.js.map": "/Portfolio/static/js/787.b98c23e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.005d6b5d.css",
-    "static/js/main.423ea7cc.js"
+    "static/js/main.933591ef.js"
   ]
 }
