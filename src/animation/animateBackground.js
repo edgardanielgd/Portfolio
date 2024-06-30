@@ -8,30 +8,37 @@ import config from "../config";
 const animators = [
     new Sphere(),
     new Balls(),
-
 ]
 
 const CONTEXT_TYPE = "webgl"
 
-let currentAnimatorIndex = 0;
+let currentAnimatorIndex = 1;
 
 let P5 = null;
 let targetCanvas = null;
+let targetCanvasP5 = null;
 let started = false;
 let currentTheme = "light";
 
 const getParentSize = () => {
     const parent = document.getElementById(config.ANIMATION_CONTAINER_ID);
+    const { top } = parent.getBoundingClientRect();
+
+    const scrollY = window.scrollY;
+    const canvasOffsetTop = (top >= 0) ? top : scrollY;
+
     return {
-        width: parent.clientWidth,
-        height: parent.clientHeight
+        width: Math.min(window.innerWidth, parent.clientWidth),
+        height: Math.min(window.innerHeight, parent.clientHeight),
+        pHeight: parent.clientHeight,
+        top: canvasOffsetTop
     }
 }
 
 const s = (sk) => {
 
     const updateCanvasSize = () => {
-        const { width, height } = getParentSize();
+        const { width, height, top, pHeight } = getParentSize();
         sk.resizeCanvas(width, height);
 
         // Update animations canvas size
@@ -40,6 +47,13 @@ const s = (sk) => {
                 width, height
             );
         })
+
+        // Check if canvas will go out of the screen
+        const limitY = top + height;
+        if (limitY < pHeight)
+            targetCanvasP5.position(0, top)
+        else
+            targetCanvasP5.position(0, top - (limitY - pHeight));
     }
 
     animators.forEach(animation => {
@@ -47,8 +61,8 @@ const s = (sk) => {
     });
 
     sk.setup = () => {
-        const renderer = CONTEXT_TYPE == "2d" ? sk.P2D : sk.WEBGL;
-        sk.createCanvas(1, 1, renderer, targetCanvas);
+        const renderer = CONTEXT_TYPE === "2d" ? sk.P2D : sk.WEBGL;
+        targetCanvasP5 = sk.createCanvas(1, 1, renderer, targetCanvas);
         updateCanvasSize();
 
         animators.forEach(animation => {
@@ -57,15 +71,12 @@ const s = (sk) => {
     }
 
     sk.draw = () => {
+        updateCanvasSize();
         const backgroundColor = themeConfig["--portfolio-background-color"][currentTheme];
         sk.background(backgroundColor);
 
         const animationColor = themeConfig["animation-color"][currentTheme];
         animators[currentAnimatorIndex].draw(animationColor);
-    }
-
-    sk.windowResized = () => {
-        updateCanvasSize();
     }
 
     sk.keyPressed = () => {
@@ -87,6 +98,12 @@ const s = (sk) => {
         }
     }
 }
+
+// document.addEventListener("scroll", () => {
+//     if (P5) {
+//         P5.windowResized();
+//     }
+// })
 
 
 export const handleTheneChange = (theme) => {

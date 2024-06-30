@@ -8,7 +8,7 @@ function Footer({lang}) {
                     {getString(lang, "HostedWithGithub")}
                 </div>
                 <div className="col-12 col-sm-4 m-auto">
-                    {getString(lang, "LastUpdate")+ "2024-05-02"}
+                    {getString(lang, "LastUpdate")+ "2024-06-30"}
                 </div>
                 <div className="col-12 col-sm-4 m-auto">
                     {getString(lang, "FreePik")}

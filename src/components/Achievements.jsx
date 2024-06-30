@@ -24,7 +24,7 @@ function AchievementsView({lang}){
             </div>
             <GCPItem
                 text = {getString(lang, "Achievements-GCP-1")}
-                link = "GCP.pdf"
+                link = "https://drive.google.com/file/d/1Xntbea_MHw2im_UCqM_fpr6DdZcfVB7Q/view?usp=drive_link"
             />
             <CiscoItem
                 text = {getString(lang, "Achievements-Cisco-1")}
