@@ -1,6 +1,6 @@
 {
   "homepage": "https://edgardanielgd.github.io/Portfolio",
-  "name": "Portfolio",
+  "name": "edgardanielgd-portfolio",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
